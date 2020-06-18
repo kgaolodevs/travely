@@ -19,7 +19,7 @@ body {
 }
 
 :root {
-  --color-primary: #25242a;
+  --color-primary: #1d1c20;
   --color-white: #ffffff;
 }
 
@@ -52,5 +52,13 @@ body {
 
 .navigation__items .item {
   margin: 1rem;
+}
+
+.hero {
+  width: 100vw;
+  height: 75vh;
+  background-image: url(./assets/trust-tru-katsande-WUMSuerEjfM-unsplash.jpg);
+  background-size: cover;
+  background-position: bottom;
 }
 /*# sourceMappingURL=style.css.map */
