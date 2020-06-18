@@ -22,6 +22,7 @@ body {
 :root {
   --color-primary: #1d1c20;
   --color-white: #ffffff;
+  --color-blue: rgb(60, 96, 163);
 }
 
 .navigation {
@@ -52,4 +53,46 @@ body {
   background-image: url(./assets/trust-tru-katsande-WUMSuerEjfM-unsplash.jpg);
   background-size: cover;
   background-position: bottom;
+
+  &__content {
+    height: 100%;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &--title {
+      font-size: 5rem;
+    }
+
+    &--subtext {
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 2rem;
+    }
+
+    &--btn {
+      background-color: var(--color-blue);
+      color: var(--color-white);
+      border: none;
+      padding: 1.3rem 8rem;
+      transition: ease all 0.5s;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        box-shadow: 0 0.6rem 1rem black;
+      }
+
+      &:focus {
+        outline: none;
+      }
+
+      &:active {
+        transform: scale(1);
+        box-shadow: none;
+      }
+    }
+  }
 }

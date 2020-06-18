@@ -21,6 +21,7 @@ body {
 :root {
   --color-primary: #1d1c20;
   --color-white: #ffffff;
+  --color-blue: rgb(60, 96, 163);
 }
 
 .navigation {
@@ -60,5 +61,61 @@ body {
   background-image: url(./assets/trust-tru-katsande-WUMSuerEjfM-unsplash.jpg);
   background-size: cover;
   background-position: bottom;
+}
+
+.hero__content {
+  height: 100%;
+  color: var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero__content--title {
+  font-size: 5rem;
+}
+
+.hero__content--subtext {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 2rem;
+}
+
+.hero__content--btn {
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  padding: 1.3rem 8rem;
+  -webkit-transition: ease all 0.5s;
+  transition: ease all 0.5s;
+}
+
+.hero__content--btn:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0.6rem 1rem black;
+          box-shadow: 0 0.6rem 1rem black;
+}
+
+.hero__content--btn:focus {
+  outline: none;
+}
+
+.hero__content--btn:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 /*# sourceMappingURL=style.css.map */
