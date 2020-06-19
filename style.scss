@@ -11,6 +11,7 @@
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -25,77 +26,104 @@ body {
   --color-blue: rgb(60, 96, 163);
 }
 
-.navigation {
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  padding: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 10vh;
-
-  &__logo {
-    font-size: 2.5rem;
-    font-family: "Brush Script MT";
-    flex: 1 1 25rem;
-  }
-
-  &__items {
-    display: flex;
-    justify-content: end;
-    flex: 1 1 25rem;
-    font-size: 1.4rem;
-    justify-content: space-around;
-    padding: 0 1.5rem 0 1.5rem;
-  }
-}
-
-.hero {
-  width: 100vw;
-  height: 90vh;
-  background-image: url(./assets/trust-tru-katsande-WUMSuerEjfM-unsplash.jpg);
-  background-size: cover;
-  background-position: bottom;
-
-  &__content {
-    height: 100%;
+.site {
+  .navigation {
+    background-color: var(--color-primary);
     color: var(--color-white);
+    padding: 2rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
+    min-height: 10vh;
 
-    &--title {
-      font-size: 5rem;
+    &__logo {
+      font-size: 2.5rem;
+      font-family: "Brush Script MT";
+      flex: 1 1 25rem;
     }
 
-    &--subtext {
-      text-align: center;
-      font-size: 1.5rem;
-      margin: 2rem;
+    &__items {
+      display: flex;
+      justify-content: end;
+      flex: 1 1 25rem;
+      font-size: 1.4rem;
+      justify-content: space-around;
+      padding: 0 1.5rem 0 1.5rem;
     }
+  }
 
-    &--btn {
-      background-color: var(--color-blue);
+  .hero {
+    width: 100vw;
+    height: 90vh;
+    background-image: url(./assets/trust-tru-katsande-WUMSuerEjfM-unsplash.jpg);
+    background-size: cover;
+    background-position: bottom;
+
+    &__content {
+      height: 100%;
       color: var(--color-white);
-      border: none;
-      padding: 1.3rem 8rem;
-      transition: ease all 0.5s;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-        box-shadow: 0 0.6rem 1rem black;
+      &--title {
+        font-size: 5rem;
+        transition: ease all 0.5s;
       }
 
-      &:focus {
-        outline: none;
+      &--subtext {
+        text-align: center;
+        font-size: 1.5rem;
+        margin: 2rem;
+        transition: ease all 0.5s;
       }
 
-      &:active {
-        transform: scale(1);
-        box-shadow: none;
+      &--btn {
+        background-color: var(--color-blue);
+        color: var(--color-white);
+        border: none;
+        padding: 1.3rem 8rem;
+        transition: ease all 0.5s;
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.1);
+          box-shadow: 0 0.6rem 1rem black;
+        }
+
+        &:focus {
+          outline: none;
+        }
+
+        &:active {
+          transform: scale(1);
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  .citySection {
+    height: 100vh;
+    background: url(./assets/grayscale-photo-of-people-between-buildings-1217258.jpg);
+    background-position: center;
+    background-size: cover;
+
+    &__content {
+      color: var(--color-primary);
+
+      &--title {
+        font-size: 5rem;
+        width: fit-content;
+        border-bottom: var(--color-primary) 0.5rem solid;
+        padding: 1rem 0.5rem;
+        margin-bottom: 4rem;
+      }
+
+      &--subtext {
+        font-size: 1.5rem;
       }
     }
   }
@@ -109,6 +137,58 @@ body {
 
     &__logo {
       margin-bottom: 3rem;
+    }
+  }
+
+  .hero {
+    &__content {
+      &--title {
+        font-size: 4rem;
+      }
+
+      &--subtext {
+        font-size: 1.3rem;
+      }
+
+      &--btn {
+        transform: scale(0.8);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .hero {
+    &__content {
+      &--title {
+        font-size: 3.5rem;
+      }
+
+      &--subtext {
+        font-size: 1.2rem;
+      }
+
+      &--btn {
+        transform: scale(0.7);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .hero {
+    &__content {
+      &--title {
+        font-size: 3rem;
+      }
+
+      &--subtext {
+        font-size: 1.1rem;
+      }
+
+      &--btn {
+        transform: scale(0.7);
+      }
     }
   }
 }
