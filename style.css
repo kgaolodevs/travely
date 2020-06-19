@@ -140,6 +140,7 @@ body {
   background: url(./assets/grayscale-photo-of-people-between-buildings-1217258.jpg);
   background-position: center;
   background-size: cover;
+  padding: 6rem 0 0 105rem;
 }
 
 .site .citySection__content {
@@ -148,10 +149,10 @@ body {
 
 .site .citySection__content--title {
   font-size: 5rem;
+  border-bottom: var(--color-primary) 0.5rem solid;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  border-bottom: var(--color-primary) 0.5rem solid;
   padding: 1rem 0.5rem;
   margin-bottom: 4rem;
 }

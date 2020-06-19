@@ -110,14 +110,15 @@ body {
     background: url(./assets/grayscale-photo-of-people-between-buildings-1217258.jpg);
     background-position: center;
     background-size: cover;
+    padding: 6rem 0 0 105rem;
 
     &__content {
       color: var(--color-primary);
 
       &--title {
         font-size: 5rem;
-        width: fit-content;
         border-bottom: var(--color-primary) 0.5rem solid;
+        width: fit-content;
         padding: 1rem 0.5rem;
         margin-bottom: 4rem;
       }
