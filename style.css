@@ -367,8 +367,9 @@ body {
 
 .site .contact__form--field label {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 5rem;
-          flex: 1 1 5rem;
+      -ms-flex: 1 1 10rem;
+          flex: 1 1 10rem;
+  margin: 1.68rem 0;
 }
 
 .site .contact__form--field input {
@@ -392,6 +393,27 @@ body {
 
 .site .contact__form--btn {
   margin-top: 4rem;
+  width: 100%;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  padding: 2rem;
+  font-size: 1.7rem;
+  color: var(--color-white);
+  background-color: var(--color-primary);
+  border: none;
+  -webkit-transition: all ease-in-out 0.35s;
+  transition: all ease-in-out 0.35s;
+}
+
+.site .contact__form--btn:hover {
+  cursor: pointer;
+  background-color: #131216;
+  font-size: 1.75rem;
+}
+
+.site .contact__form--btn:focus {
+  background-color: var(--color-primary);
+  outline: none;
 }
 
 @media screen and (max-width: 1054px) {
@@ -429,6 +451,9 @@ body {
   .site .cardSection__title--subtext {
     font-size: 1.3rem;
   }
+  .site .contact__form {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 580px) {
@@ -454,6 +479,13 @@ body {
   .site .cardSection__title--subtext {
     font-size: 1.3rem;
   }
+  .site .contact__form--title {
+    font-size: 4rem;
+  }
+  .site .contact__form--field {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -469,6 +501,15 @@ body {
   }
   .site .cardSection__title--subtext {
     font-size: 1.2rem;
+  }
+  .site .contact__form {
+    width: 65%;
+  }
+  .site .contact__form--title {
+    font-size: 3.5rem;
+  }
+  .site .contact__form--field {
+    font-size: 2.4rem;
   }
 }
 
@@ -491,6 +532,16 @@ body {
   }
   .site .citySection__content--subtext {
     font-size: 1.3rem;
+  }
+  .site .contact__form--title {
+    font-size: 2rem;
+  }
+  .site .contact__form--field {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .site .contact__form--field input {
+    width: 1rem;
   }
 }
 
