@@ -192,7 +192,44 @@ body {
           animation: cloudAnimation 10s infinite ease-in-out alternate;
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 1054px) {
+  .site .citySection {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .site .citySection__content {
+    margin: 0;
+  }
+  .site .citySection__content--title {
+    width: 100%;
+    text-align: center;
+  }
+  .site .citySection__content--subtext {
+    text-align: center;
+  }
+  .site .citySection__cloud {
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .site .citySection__cloud {
+    height: 16rem;
+  }
+  .site .citySection__content--title {
+    font-size: 4.5rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
   .site .navigation {
     text-align: center;
   }
@@ -221,6 +258,15 @@ body {
   .site .hero__content--btn {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
+  }
+  .site .citySection__cloud {
+    height: 12rem;
+  }
+  .site .citySection__content--title {
+    font-size: 4rem;
+  }
+  .site .citySection__content--subtext {
+    font-size: 1.3rem;
   }
 }
 

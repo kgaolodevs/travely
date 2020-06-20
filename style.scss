@@ -151,7 +151,51 @@ body {
 
 // Breakpoints
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 1054px) {
+  .site {
+    .citySection {
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+
+      &__content {
+        margin: 0;
+
+        &--title {
+          width: 100%;
+          text-align: center;
+        }
+
+        &--subtext {
+          text-align: center;
+        }
+      }
+
+      &__cloud {
+        margin: 0;
+        // display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .site {
+    .citySection {
+      &__cloud {
+        height: 16rem;
+      }
+
+      &__content {
+        &--title {
+          font-size: 4.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
   .site {
     .navigation {
       text-align: center;
@@ -193,6 +237,22 @@ body {
 
         &--btn {
           transform: scale(0.7);
+        }
+      }
+    }
+
+    .citySection {
+      &__cloud {
+        height: 12rem;
+      }
+
+      &__content {
+        &--title {
+          font-size: 4rem;
+        }
+
+        &--subtext {
+          font-size: 1.3rem;
         }
       }
     }
