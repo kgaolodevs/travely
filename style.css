@@ -192,6 +192,38 @@ body {
           animation: cloudAnimation 10s infinite ease-in-out alternate;
 }
 
+.site .cardSection {
+  height: 100vh;
+}
+
+.site .cardSection__title {
+  background-color: var(--color-primary);
+  height: 30%;
+  color: var(--color-white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.site .cardSection__title--heading {
+  font-size: 5rem;
+  margin-bottom: 2rem;
+}
+
+.site .cardSection__title--subtext {
+  font-size: 1.5rem;
+}
+
 @media screen and (max-width: 1054px) {
   .site .citySection {
     -webkit-box-pack: start;

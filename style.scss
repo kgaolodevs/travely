@@ -147,6 +147,29 @@ body {
       animation: cloudAnimation 10s infinite ease-in-out alternate;
     }
   }
+
+  .cardSection {
+    height: 100vh;
+
+    &__title {
+      background-color: var(--color-primary);
+      height: 30%;
+      color: var(--color-white);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &--heading {
+        font-size: 5rem;
+        margin-bottom: 2rem;
+      }
+
+      &--subtext {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
 
 // Breakpoints
