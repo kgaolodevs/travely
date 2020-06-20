@@ -22,13 +22,15 @@ body {
 :root {
   --color-primary: #1d1c20;
   --color-white: #ffffff;
-  --color-blue: rgb(60, 96, 163);
+  --color-blue: #3c60a3;
+  --color-blue-dark: #2e497a;
+  --gradient-primary: #00000086, transparent;
 }
 
 .site .navigation {
   background-color: var(--color-primary);
   color: var(--color-white);
-  padding: 2rem;
+  padding: 2rem 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,9 +48,9 @@ body {
 .site .navigation__logo {
   font-size: 2.5rem;
   font-family: "Brush Script MT";
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 25rem;
-          flex: 1 1 25rem;
+  -webkit-box-flex: 3;
+      -ms-flex: 3 1 25rem;
+          flex: 3 1 25rem;
 }
 
 .site .navigation__items {
@@ -62,15 +64,17 @@ body {
       -ms-flex: 1 1 25rem;
           flex: 1 1 25rem;
   font-size: 1.4rem;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 0 1.5rem 0 1.5rem;
 }
 
 .site .hero {
   width: 100vw;
   height: 90vh;
-  background-image: url(./assets/trust-tru-katsande-WUMSuerEjfM-unsplash.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--gradient-primary))), url(./assets/trust-tru-katsande-WUMSuerEjfM-unsplash.jpg);
+  background: linear-gradient(var(--gradient-primary)), url(./assets/trust-tru-katsande-WUMSuerEjfM-unsplash.jpg);
   background-size: cover;
   background-position: bottom;
 }
@@ -122,6 +126,8 @@ body {
           transform: scale(1.1);
   -webkit-box-shadow: 0 0.6rem 1rem black;
           box-shadow: 0 0.6rem 1rem black;
+  background-color: var(--color-blue-dark);
+  color: var(--color-dar);
 }
 
 .site .hero__content--btn:focus {
@@ -137,14 +143,26 @@ body {
 
 .site .citySection {
   height: 100vh;
-  background: url(./assets/grayscale-photo-of-people-between-buildings-1217258.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--gradient-primary))), url(./assets/grayscale-photo-of-people-between-buildings-1217258.jpg);
+  background: linear-gradient(var(--gradient-primary)), url(./assets/grayscale-photo-of-people-between-buildings-1217258.jpg);
   background-position: center;
   background-size: cover;
-  padding: 6rem 0 0 105rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .site .citySection__content {
-  color: var(--color-primary);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 8rem 15rem 0 0;
 }
 
 .site .citySection__content--title {
@@ -161,48 +179,91 @@ body {
   font-size: 1.5rem;
 }
 
+.site .citySection__cloud {
+  height: 21rem;
+  margin-left: 5.5rem;
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  background: url(./assets/hiclipart.com.png);
+  opacity: 50%;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  -webkit-animation: cloudAnimation 10s infinite ease-in-out alternate;
+          animation: cloudAnimation 10s infinite ease-in-out alternate;
+}
+
 @media screen and (max-width: 540px) {
-  .navigation {
+  .site .navigation {
     text-align: center;
   }
-  .navigation__logo {
+  .site .navigation__logo {
     margin-bottom: 3rem;
   }
-  .hero__content--title {
+  .site .hero__content--title {
     font-size: 4rem;
   }
-  .hero__content--subtext {
+  .site .hero__content--subtext {
     font-size: 1.3rem;
   }
-  .hero__content--btn {
+  .site .hero__content--btn {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
 }
 
 @media screen and (max-width: 376px) {
-  .hero__content--title {
+  .site .hero__content--title {
     font-size: 3.5rem;
   }
-  .hero__content--subtext {
+  .site .hero__content--subtext {
     font-size: 1.2rem;
   }
-  .hero__content--btn {
+  .site .hero__content--btn {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
   }
 }
 
 @media screen and (max-width: 330px) {
-  .hero__content--title {
+  .site .hero__content--title {
     font-size: 3rem;
   }
-  .hero__content--subtext {
+  .site .hero__content--subtext {
     font-size: 1.1rem;
   }
-  .hero__content--btn {
+  .site .hero__content--btn {
     -webkit-transform: scale(0.7);
             transform: scale(0.7);
+  }
+}
+
+@-webkit-keyframes cloudAnimation {
+  0% {
+    -webkit-transform: translate(-10%, -5%);
+            transform: translate(-10%, -5%);
+  }
+  50% {
+    -webkit-transform: translate(20%, 1%);
+            transform: translate(20%, 1%);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes cloudAnimation {
+  0% {
+    -webkit-transform: translate(-10%, -5%);
+            transform: translate(-10%, -5%);
+  }
+  50% {
+    -webkit-transform: translate(20%, 1%);
+            transform: translate(20%, 1%);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
   }
 }
 /*# sourceMappingURL=style.css.map */

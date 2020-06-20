@@ -23,14 +23,16 @@ body {
 :root {
   --color-primary: #1d1c20;
   --color-white: #ffffff;
-  --color-blue: rgb(60, 96, 163);
+  --color-blue: #3c60a3;
+  --color-blue-dark: #2e497a;
+  --gradient-primary: #00000086, transparent;
 }
 
 .site {
   .navigation {
     background-color: var(--color-primary);
     color: var(--color-white);
-    padding: 2rem;
+    padding: 2rem 4rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -40,7 +42,8 @@ body {
     &__logo {
       font-size: 2.5rem;
       font-family: "Brush Script MT";
-      flex: 1 1 25rem;
+      flex: 3 1 25rem;
+      // padding: 0 0 0 5rem;
     }
 
     &__items {
@@ -48,7 +51,7 @@ body {
       justify-content: end;
       flex: 1 1 25rem;
       font-size: 1.4rem;
-      justify-content: space-around;
+      justify-content: space-between;
       padding: 0 1.5rem 0 1.5rem;
     }
   }
@@ -56,7 +59,8 @@ body {
   .hero {
     width: 100vw;
     height: 90vh;
-    background-image: url(./assets/trust-tru-katsande-WUMSuerEjfM-unsplash.jpg);
+    background: linear-gradient(var(--gradient-primary)),
+      url(./assets/trust-tru-katsande-WUMSuerEjfM-unsplash.jpg);
     background-size: cover;
     background-position: bottom;
 
@@ -91,6 +95,8 @@ body {
           cursor: pointer;
           transform: scale(1.1);
           box-shadow: 0 0.6rem 1rem black;
+          background-color: var(--color-blue-dark);
+          color: var(--color-dar);
         }
 
         &:focus {
@@ -107,13 +113,17 @@ body {
 
   .citySection {
     height: 100vh;
-    background: url(./assets/grayscale-photo-of-people-between-buildings-1217258.jpg);
+    background: linear-gradient(var(--gradient-primary)),
+      url(./assets/grayscale-photo-of-people-between-buildings-1217258.jpg);
     background-position: center;
     background-size: cover;
-    padding: 6rem 0 0 105rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 
     &__content {
-      color: var(--color-primary);
+      width: fit-content;
+      margin: 8rem 15rem 0 0;
 
       &--title {
         font-size: 5rem;
@@ -127,69 +137,98 @@ body {
         font-size: 1.5rem;
       }
     }
+    &__cloud {
+      height: 21rem;
+      margin-left: 5.5rem;
+      transform: rotate(360deg);
+      background: url(./assets/hiclipart.com.png);
+      opacity: 50%;
+      transition: all ease-in-out 0.5s;
+      animation: cloudAnimation 10s infinite ease-in-out alternate;
+    }
   }
 }
 
 // Breakpoints
 
 @media screen and (max-width: 540px) {
-  .navigation {
-    text-align: center;
+  .site {
+    .navigation {
+      text-align: center;
 
-    &__logo {
-      margin-bottom: 3rem;
+      &__logo {
+        margin-bottom: 3rem;
+      }
     }
-  }
 
-  .hero {
-    &__content {
-      &--title {
-        font-size: 4rem;
-      }
+    .hero {
+      &__content {
+        &--title {
+          font-size: 4rem;
+        }
 
-      &--subtext {
-        font-size: 1.3rem;
-      }
+        &--subtext {
+          font-size: 1.3rem;
+        }
 
-      &--btn {
-        transform: scale(0.8);
+        &--btn {
+          transform: scale(0.8);
+        }
       }
     }
   }
 }
 
 @media screen and (max-width: 376px) {
-  .hero {
-    &__content {
-      &--title {
-        font-size: 3.5rem;
-      }
+  .site {
+    .hero {
+      &__content {
+        &--title {
+          font-size: 3.5rem;
+        }
 
-      &--subtext {
-        font-size: 1.2rem;
-      }
+        &--subtext {
+          font-size: 1.2rem;
+        }
 
-      &--btn {
-        transform: scale(0.7);
+        &--btn {
+          transform: scale(0.7);
+        }
       }
     }
   }
 }
 
 @media screen and (max-width: 330px) {
-  .hero {
-    &__content {
-      &--title {
-        font-size: 3rem;
-      }
+  .site {
+    .hero {
+      &__content {
+        &--title {
+          font-size: 3rem;
+        }
 
-      &--subtext {
-        font-size: 1.1rem;
-      }
+        &--subtext {
+          font-size: 1.1rem;
+        }
 
-      &--btn {
-        transform: scale(0.7);
+        &--btn {
+          transform: scale(0.7);
+        }
       }
     }
+  }
+}
+
+// Animations
+@keyframes cloudAnimation {
+  0% {
+    transform: translate(-10%, -5%);
+  }
+  50% {
+    transform: translate(20%, 1%);
+  }
+
+  100% {
+    transform: translate(0);
   }
 }
