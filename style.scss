@@ -169,6 +169,64 @@ body {
         font-size: 1.5rem;
       }
     }
+
+    &__cards {
+      height: 70%;
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+
+      .card {
+        // outline: 0.2rem crimson solid;
+        // flex: 1 1;
+        width: 30rem;
+        min-width: 20rem;
+        height: 37rem;
+        box-shadow: 0.2rem 0.2rem 2.5rem #25242a49;
+        border-radius: 2rem;
+        margin: 4rem;
+        flex: 1 1 25rem;
+      }
+
+      &--card-icon {
+        background-color: var(--color-primary);
+        height: 6rem;
+
+        &-bg {
+          background-color: var(--color-primary);
+          padding: 3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-top-left-radius: 2rem;
+          border-top-right-radius: 2rem;
+        }
+      }
+
+      &--card-content {
+        // outline: crimson 0.5rem solid;
+        height: 25rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        text-align: center;
+      }
+
+      &--card-title {
+        font-size: 4rem;
+        margin-bottom: 5rem;
+      }
+
+      &--card-info {
+        font-size: 2rem;
+        text-align: center;
+      }
+    }
   }
 }
 
@@ -202,22 +260,6 @@ body {
   }
 }
 
-@media screen and (max-width: 560px) {
-  .site {
-    .citySection {
-      &__cloud {
-        height: 16rem;
-      }
-
-      &__content {
-        &--title {
-          font-size: 4.5rem;
-        }
-      }
-    }
-  }
-}
-
 @media screen and (max-width: 580px) {
   .site {
     .navigation {
@@ -240,6 +282,22 @@ body {
 
         &--btn {
           transform: scale(0.8);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .site {
+    .citySection {
+      &__cloud {
+        height: 16rem;
+      }
+
+      &__content {
+        &--title {
+          font-size: 4.5rem;
         }
       }
     }
