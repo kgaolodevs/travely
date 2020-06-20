@@ -213,15 +213,22 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1.5rem;
 }
 
 .site .cardSection__title--heading {
   font-size: 5rem;
   margin-bottom: 2rem;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  text-align: center;
 }
 
 .site .cardSection__title--subtext {
   font-size: 1.5rem;
+  -webkit-transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.5s;
+  text-align: center;
 }
 
 .site .cardSection__cards {
@@ -333,6 +340,15 @@ body {
   }
 }
 
+@media screen and (max-width: 775px) {
+  .site .cardSection__title--heading {
+    font-size: 4rem;
+  }
+  .site .cardSection__title--subtext {
+    font-size: 1.3rem;
+  }
+}
+
 @media screen and (max-width: 580px) {
   .site .navigation {
     text-align: center;
@@ -350,6 +366,12 @@ body {
     -webkit-transform: scale(0.8);
             transform: scale(0.8);
   }
+  .site .cardSection__title--heading {
+    font-size: 3.5rem;
+  }
+  .site .cardSection__title--subtext {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -357,7 +379,14 @@ body {
     height: 16rem;
   }
   .site .citySection__content--title {
+    word-wrap: break-word;
     font-size: 4.5rem;
+  }
+  .site .cardSection__title--heading {
+    font-size: 3rem;
+  }
+  .site .cardSection__title--subtext {
+    font-size: 1.2rem;
   }
 }
 

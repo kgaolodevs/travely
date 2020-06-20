@@ -159,14 +159,19 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      padding: 1.5rem;
 
       &--heading {
         font-size: 5rem;
         margin-bottom: 2rem;
+        transition: all ease-in-out 0.5s;
+        text-align: center;
       }
 
       &--subtext {
         font-size: 1.5rem;
+        transition: all ease-in-out 0.5s;
+        text-align: center;
       }
     }
 
@@ -260,6 +265,20 @@ body {
   }
 }
 
+@media screen and (max-width: 775px) {
+  .site {
+    .cardSection__title {
+      &--heading {
+        font-size: 4rem;
+      }
+
+      &--subtext {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 580px) {
   .site {
     .navigation {
@@ -285,6 +304,16 @@ body {
         }
       }
     }
+
+    .cardSection__title {
+      &--heading {
+        font-size: 3.5rem;
+      }
+
+      &--subtext {
+        font-size: 1.3rem;
+      }
+    }
   }
 }
 
@@ -297,8 +326,19 @@ body {
 
       &__content {
         &--title {
+          word-wrap: break-word;
           font-size: 4.5rem;
         }
+      }
+    }
+
+    .cardSection__title {
+      &--heading {
+        font-size: 3rem;
+      }
+
+      &--subtext {
+        font-size: 1.2rem;
       }
     }
   }
