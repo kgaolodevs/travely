@@ -70,6 +70,19 @@ body {
   padding: 0 1.5rem 0 1.5rem;
 }
 
+.site .navigation__items .item a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+.site .navigation__items .item a:focus {
+  outline: none;
+}
+
+.site .navigation__items .item:hover {
+  cursor: pointer;
+}
+
 .site .hero {
   width: 100vw;
   height: 90vh;
