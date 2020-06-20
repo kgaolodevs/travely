@@ -149,8 +149,6 @@ body {
   }
 
   .cardSection {
-    height: 100vh;
-
     &__title {
       background-color: var(--color-primary);
       height: 30%;
@@ -183,6 +181,7 @@ body {
       justify-content: center;
       justify-content: space-around;
       flex-wrap: wrap;
+      padding: 4rem 2rem;
 
       .card {
         // outline: 0.2rem crimson solid;
@@ -232,6 +231,12 @@ body {
         text-align: center;
       }
     }
+  }
+
+  .contact {
+    height: 100vh;
+    background: url(./assets/snow-top-mountain-under-clear-sky-1054218.jpg);
+    background-size: cover;
   }
 }
 
