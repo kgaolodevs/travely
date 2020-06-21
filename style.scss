@@ -25,7 +25,7 @@ body {
   --color-white: #ffffff;
   --color-blue: #3c60a3;
   --color-blue-dark: #2e497a;
-  --gradient-primary: #00000086, transparent;
+  --gradient-primary: #000000ab, transparent;
 }
 
 .site {
@@ -38,11 +38,19 @@ body {
     justify-content: space-between;
     align-items: center;
     min-height: 10vh;
+    position: sticky;
+    top: 0px;
+    z-index: 5;
 
     &__logo {
-      font-size: 2.5rem;
-      font-family: "Brush Script MT";
+      a {
+        text-decoration: none;
+        color: var(--color-white);
+        font-size: 2.5rem;
+        font-family: "Brush Script MT";
+      }
       flex: 3 1 25rem;
+
       // padding: 0 0 0 5rem;
     }
 
@@ -58,9 +66,6 @@ body {
         a {
           text-decoration: none;
           color: var(--color-white);
-          &:focus {
-            outline: none;
-          }
         }
         &:hover {
           cursor: pointer;
@@ -136,11 +141,12 @@ body {
 
     &__content {
       width: fit-content;
-      margin: 8rem 15rem 0 0;
+      margin: 5rem 15rem 0 0;
 
       &--title {
         font-size: 5rem;
-        border-bottom: var(--color-primary) 0.5rem solid;
+        border-bottom: var(--color-white) 0.5rem solid;
+        color: var(--color-white);
         width: fit-content;
         padding: 1rem 0.5rem;
         margin-bottom: 4rem;
@@ -148,6 +154,7 @@ body {
 
       &--subtext {
         font-size: 1.5rem;
+        color: var(--color-white);
       }
     }
     &__cloud {
